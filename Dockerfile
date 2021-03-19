@@ -1,6 +1,6 @@
 FROM continuumio/anaconda3:4.4.0
 MAINTAINER UNP, https://unp.education
-EXPOSE 8000
+EXPOSE 80
 RUN apt-get update && apt-get install -y apache2 \
     apache2-dev \   
     vim \
@@ -12,7 +12,7 @@ COPY ./flask_predict_api.wsgi /var/www/flask_predict_api/flask_predict_api.wsgi
 COPY ./flask_demo /var/www/flask_predict_api/
 RUN pip install -r requirements.txt
 RUN /opt/conda/bin/mod_wsgi-express install-module
-RUN mod_wsgi-express setup-server flask_predict_api.wsgi --port=8000 \
+RUN mod_wsgi-express setup-server flask_predict_api.wsgi --port=80 \
     --user www-data --group www-data \
     --server-root=/etc/mod_wsgi-express-80
 CMD /etc/mod_wsgi-express-80/apachectl start -D FOREGROUND

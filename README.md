@@ -10,6 +10,12 @@ Following these instructions will get you a functioning model on the internet wi
 
 Have a working ML model with its corresponding `Dockerfile`. In this repository a simple model is given as an example.
 
+### Architecture
+
+The deployment follows the following architecture:
+
+![architecture](./architecture.jpg)
+
 ### Deploying the ML model with AWS
 
 1. Create a AWS EC2 instance.

@@ -14,7 +14,7 @@ Have a working ML model with its corresponding `Dockerfile`. In this repository 
 
 The deployment follows the following architecture:
 
-![architecture](./architecture.jpg)
+![architecture](/architecture.png)
 
 ### Deploying the ML model with AWS
 
